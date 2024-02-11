@@ -1,0 +1,244 @@
+button{
+    cursor: pointer;
+}
+.content button {
+    box-shadow: 5px 5px;
+    padding: 20px;
+    font-size: 2.5vw;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.menu{
+    display: inline-block;
+    position: fixed;
+    right: 0;
+    z-index: 3;
+    margin-right: 2%;
+}
+.menu img{
+    height: 2vw;
+    cursor: pointer;
+}
+.menu button{
+    background-color: white;
+    border: none;
+}
+.menu-op{
+    position: fixed;
+    width: 30%;
+    top:0;
+    right: 0;
+    margin-top: 70px;
+    border: 1.5px solid black;
+    z-index: 4;
+    
+}
+.menu-op button{
+    font-size: 2vw;
+    width: 100%;
+    background-color: white;
+    border: 1.5px solid black;
+    padding: 5px;
+}
+
+.header {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid black;
+    z-index: 2;
+    box-shadow: 0px 3px 5px 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: white;
+}
+
+.header h1 {
+    text-align: center;
+    margin: auto;
+    font-size: 3vw;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+.main-containt{
+    margin-top: 100px;
+
+}
+.main-containt h1{
+    font-size: 2.5vw;
+    text-align: center;
+    padding: 50px;
+}
+.input-box{
+    display: flex;
+    justify-content: space-evenly;
+}
+.input-box input{
+    width: 40%;
+    height: 30px;
+    font-size: 25px;
+}
+.seclect{
+    display: flex;
+    justify-content: space-evenly;
+}
+.seclect select{
+    width: 40%;
+    height: 30px;
+    font-size: 20px;
+}
+
+
+
+
+#history{
+    margin-top: 100px;
+    text-align: center;
+    border-top: 1.5px solid black;
+    width: 100%;
+}
+.his{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 1.5px solid black;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.his img{
+    width: 10%;
+}
+.his input{
+    height: fit-content;
+    font-size: 25px;
+    width: 40%;
+}
+.conv{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:800px) {
+    /* button {
+        font-size: 4vw;
+    } */
+    .header h1{
+        font-size: 6.5vw;
+    }
+    .menu img{
+        height: 3vw;
+    }
+}
+
+@media(max-width:700px) {
+    .content button {
+        font-size: 4vw;
+    }
+    .header h1{
+        font-size: 7vw;
+    }
+    .main-containt h1{
+        font-size: 6vw;
+    }
+    .menu img{
+        height: 3.5vw;
+    }
+    .menu-op button{
+        font-size: 4vw;
+    }
+}
+
+@media(max-width:600px) {
+    .content button {
+        font-size: 4.5vw;
+    }
+    .header h1{
+        font-size: 7vw;
+    }
+    .main-containt h1{
+        font-size: 6.5vw;
+    }
+    .menu img{
+        height: 4vw;
+    }
+    .menu-op button{
+        font-size: 4.5vw;
+    }
+}
+
+@media(max-width:500px) {
+    .content button {
+        font-size: 5vw;
+    }
+    .header h1{
+        font-size: 7.5vw;
+    }
+    .main-containt h1{
+        font-size: 7vw;
+    }
+    .menu img{
+        height: 4.5vw;
+    }
+    .menu-op button{
+        font-size: 5vw;
+    }
+}
+
+@media(max-width:400px) {
+    .content button {
+        font-size: 5.5vw;
+    }
+    .header h1{
+        font-size: 7.5vw;
+    }
+    .main-containt h1{
+        font-size: 7.5vw;
+    }
+    .menu img{
+        height: 4.5vw;
+    }
+    .menu-op button{
+        font-size: 5.5vw;
+    }
+}
+
+@media(max-width:300px) {
+    .content button {
+        font-size: 6vw;
+    }
+    .header h1{
+        font-size: 8vw;
+    }
+    .main-containt h1{
+        font-size: 8vw;
+    }
+    .menu img{
+        height: 4.5vw;
+    }
+    .menu-op button{
+        font-size: 6vw;
+    }
+}

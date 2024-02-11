@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Conversion</title>
+    <link rel="stylesheet" href="unit-conv-style.css">
+    <script src="unit-conv-java.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div>
+            <h1>Unit Conversion</h1>
+        </div>
+
+        <div class="menu">
+            <button onclick="menu_on_off()"><img src="menu.png"></button>
+        </div>
+    </div>
+    <div class="menu-op" id="m-op" style="display: none;">
+        <button onclick="history_on_off()">History</button>
+        <button onclick="document.location='About.html'">About</button>
+    </div>
+    <div class="main-containt" action="History.html" method="get">
+        <h1>Speed</h1>
+        <div class="input-box">
+            <input id="speed_box-1" type="number" oninput="speed_box1()">
+            <input id="speed_box-2" type="number" oninput="speed_box2()">
+        </div>
+        <br><br>
+        <div class="seclect">
+            <select id="speed_select-1">
+                <option>Meters per Second</option>
+                <option>Kilometers per Hour</option>
+                <option>Miles per Hour</option>
+                <option>Feet per Second</option>
+                <option>Knots</option>
+                <option>Mach</option>
+            </select>
+            <select id="speed_select-2">
+                <option>Meters per Second</option>
+                <option>Kilometers per Hour</option>
+                <option>Miles per Hour</option>
+                <option>Feet per Second</option>
+                <option>Knots</option>
+                <option>Mach</option>
+            </select>
+        </div>
+    </div>
+    <div id="history" style="display: none;">
+        <h1>History</h1>
+        <div style="display: none;">
+            <div class="his" id="hi">
+                <div class="conv">
+                    <p id="unit1"></p>
+                    <p id="unit2"></p>
+                </div>
+                <input type="number" disabled id="hs_box_1">
+                <img src="pngwing.com.png">
+                <input type="number" disabled id="hs_box_2">
+            </div>
+            <div class="his" id="rhi">
+                <div class="conv">
+                    <p id="runit1"></p>
+                    <p id="runit2"></p>
+                </div>
+                <input type="number" disabled id="rhs_box_1">
+                <img src="output-onlinepngtools.png">
+                <input type="number" disabled id="rhs_box_2">
+            </div>
+        </div>
+
+        <div id="hist">
+
+
+        </div>
+    </div>
+</body>
+
+</html>
