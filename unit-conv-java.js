@@ -3,7 +3,8 @@ function box1() {
     let box2_value = document.getElementById('box-2').value;
     let op1 = document.getElementById('select-1').value;
     let op2 = document.getElementById('select-2').value;
-    if (op1 == "Kilometer" && op2 == "Kilometer") {
+
+    if ((op1 == "Kilometer" && op2 == "Kilometer")||(box1_value=="")) {
         document.getElementById('box-2').value = box1_value;
     }
     else if (op1 == "Kilometer" && op2 == "Meter") {
@@ -420,7 +421,7 @@ function box2() {
     let box2_value = document.getElementById('box-2').value;
     let op1 = document.getElementById('select-1').value;
     let op2 = document.getElementById('select-2').value;
-    if (op1 == "Kilometer" && op2 == "Kilometer") {
+    if ((op1 == "Kilometer" && op2 == "Kilometer")||(box2_value=="")) {
         document.getElementById('box-1').value = box2_value;
     }
     else if (op1 == "Kilometer" && op2 == "Meter") {
@@ -888,7 +889,7 @@ function mass_box1() {
     let box2_value = document.getElementById('ms_box-2').value;
     let op1 = document.getElementById('ms_select-1').value;
     let op2 = document.getElementById('ms_select-2').value;
-    if (op1 == "Kilogram" && op2 == "Kilogram") {
+    if ((op1 == "Kilogram" && op2 == "Kilogram")||(box1_value=="")) {
         document.getElementById('ms_box-2').value = box1_value;
     }
     else if (op1 == "Kilogram" && op2 == "Gram") {
@@ -1014,7 +1015,7 @@ function mass_box2() {
     let box2_value = document.getElementById('ms_box-2').value;
     let op1 = document.getElementById('ms_select-1').value;
     let op2 = document.getElementById('ms_select-2').value;
-    if (op1 == "Kilogram" && op2 == "Kilogram") {
+    if ((op1 == "Kilogram" && op2 == "Kilogram")||(box2_value=="")) {
         document.getElementById('ms_box-1').value = box2_value;
     }
     else if (op1 == "Kilogram" && op2 == "Gram") {
@@ -1178,7 +1179,7 @@ function temp_box2() {
     let box2_value = document.getElementById('tm_box-2').value;
     let op1 = document.getElementById('tm_select-1').value;
     let op2 = document.getElementById('tm_select-2').value;
-    if (op1 == "Celsius" && op2 == "Celsius") {
+    if ((op1 == "Celsius" && op2 == "Celsius")||(box2_value=="")) {
         document.getElementById('tm_box-1').value = box2_value;
     }
     else if (op1 == "Celsius" && op2 == "Fahrenheit") {
@@ -1249,7 +1250,7 @@ function area_box1() {
     let box2_value = document.getElementById('area_box-2').value;
     let op1 = document.getElementById('area_select-1').value;
     let op2 = document.getElementById('area_select-2').value;
-    if (op1 == "Square Meters" && op2 == "Square Meters") {
+    if ((op1 == "Square Meters" && op2 == "Square Meters")||(box1_value=="")) {
         document.getElementById('area_box-2').value = box1_value;
     }
     else if (op1 == "Square Meters" && op2 == "Square Feet") {
@@ -1317,7 +1318,7 @@ function area_box2() {
     let box2_value = document.getElementById('area_box-2').value;
     let op1 = document.getElementById('area_select-1').value;
     let op2 = document.getElementById('area_select-2').value;
-    if (op1 == "Square Meters" && op2 == "Square Meters") {
+    if ((op1 == "Square Meters" && op2 == "Square Meters")||(box2_value=="")) {
         document.getElementById('area_box-1').value = box2_value;
     }
     else if (op1 == "Square Meters" && op2 == "Square Feet") {
@@ -1409,7 +1410,7 @@ function energy_box1() {
     let box2_value = document.getElementById('energy_box-2').value;
     let op1 = document.getElementById('energy_select-1').value;
     let op2 = document.getElementById('energy_select-2').value;
-    if (op1 == "Joules" && op2 == "Joules") {
+    if ((op1 == "Joules" && op2 == "Joules")||(box1_value=="")) {
         document.getElementById('energy_box-2').value = box1_value;
     }
     else if (op1 == "Joules" && op2 == "Calories") {
@@ -1477,7 +1478,7 @@ function energy_box2() {
     let box2_value = document.getElementById('energy_box-2').value;
     let op1 = document.getElementById('energy_select-1').value;
     let op2 = document.getElementById('energy_select-2').value;
-    if (op1 == "Joules" && op2 == "Joules") {
+    if ((op1 == "Joules" && op2 == "Joules")||(box2_value=="")) {
         document.getElementById('energy_box-1').value = box2_value;
     }
     else if (op1 == "Joules" && op2 == "Calories") {
@@ -1571,7 +1572,7 @@ function volume_box1() {
     let box2_value = document.getElementById('volume_box-2').value;
     let op1 = document.getElementById('volume_select-1').value;
     let op2 = document.getElementById('volume_select-2').value;
-    if (op1 == "Liters" && op2 == "Liters") {
+    if ((op1 == "Liters" && op2 == "Liters")||(box1_value=="")) {
         document.getElementById('volume_box-2').value = box1_value;
     }
     else if (op1 == "Liters" && op2 == "Milliliters") {
@@ -1639,7 +1640,7 @@ function volume_box2() {
     let box2_value = document.getElementById('volume_box-2').value;
     let op1 = document.getElementById('volume_select-1').value;
     let op2 = document.getElementById('volume_select-2').value;
-    if (op1 == "Liters" && op2 == "Liters") {
+    if ((op1 == "Liters" && op2 == "Liters")||(box2_value=="")) {
         document.getElementById('volume_box-2').value = box1_value;
     }
     else if (op1 == "Liters" && op2 == "Milliliters") {
@@ -1734,7 +1735,7 @@ function speed_box1() {
     let box2_value = document.getElementById('speed_box-2').value;
     let op1 = document.getElementById('speed_select-1').value;
     let op2 = document.getElementById('speed_select-2').value;
-    if (op1 == "Meters per Second" && op2 == "Meters per Second") {
+    if ((op1 == "Meters per Second" && op2 == "Meters per Second")||(box1_value=="")) {
         document.getElementById('speed_box-2').value = box1_value;
     }
     else if (op1 == "Meters per Second" && op2 == "Kilometers per Hour") {
@@ -1885,7 +1886,7 @@ function speed_box2() {
     let box2_value = document.getElementById('speed_box-2').value;
     let op1 = document.getElementById('speed_select-1').value;
     let op2 = document.getElementById('speed_select-2').value;
-    if (op1 == "Kilometers per Hour" && op2 == "Kilometers per Hour") {
+    if ((op1 == "Kilometers per Hour" && op2 == "Kilometers per Hour")||(box2_value=="")) {
         document.getElementById('speed_box-2').value = box2_value;
     }
     else if (op1 == "Kilometers per Hour" && op2 == "Miles per Hour") {
@@ -2068,7 +2069,7 @@ function pressure_box1() {
     let box2_value = document.getElementById('pressure_box-2').value;
     let op1 = document.getElementById('pressure_select-1').value;
     let op2 = document.getElementById('pressure_select-2').value;
-    if (op1 == "Pascal" && op2 == "Pascal") {
+    if ((op1 == "Pascal" && op2 == "Pascal")||(box1_value=="")) {
         document.getElementById('pressure_box-2').value = box1_value;
     }
     else if (op1 == "Pascal" && op2 == "Hectopascal") {
@@ -2218,7 +2219,7 @@ function pressure_box2() {
     let box2_value = document.getElementById('pressure_box-2').value;
     let op1 = document.getElementById('pressure_select-1').value;
     let op2 = document.getElementById('pressure_select-2').value;
-    if (op1 == "Pascal" && op2 == "Pascal") {
+    if ((op1 == "Pascal" && op2 == "Pascal")||(box2_value=="")) {
         document.getElementById('pressure_box-1').value = box2_value;
     }
     else if (op1 == "Pascal" && op2 == "Hectopascal") {
@@ -2394,7 +2395,7 @@ function storage_box1() {
     let box2_value = document.getElementById('storage_box-2').value;
     let op1 = document.getElementById('storage_select-1').value;
     let op2 = document.getElementById('storage_select-2').value;
-    if (op1 == "Bit" && op2 == "Bit") {
+    if ((op1 == "Bit" && op2 == "Bit")||(box1_value=="")) {
         document.getElementById('storage_box-2').value = box1_value;
     }
     else if (op1 == "Bit" && op2 == "Byte") {
@@ -2543,7 +2544,7 @@ function storage_box2() {
     let box2_value = document.getElementById('storage_box-2').value;
     let op1 = document.getElementById('storage_select-1').value;
     let op2 = document.getElementById('storage_select-2').value;
-    if (op1 == "Bit" && op2 == "Bit") {
+    if ((op1 == "Bit" && op2 == "Bit")||(box2_value=="")) {
         document.getElementById('storage_box-1').value = box2_value;
     }
     else if (op1 == "Bit" && op2 == "Byte") {
@@ -2716,7 +2717,7 @@ function transfer_rate_box1() {
     let box2_value = document.getElementById('transfer_rate_box-2').value;
     let op1 = document.getElementById('transfer_rate_select-1').value;
     let op2 = document.getElementById('transfer_rate_select-2').value;
-    if (op1 == "Bit/s" && op2 == "Bit/s") {
+    if ((op1 == "Bit/s" && op2 == "Bit/s")||(box1_value=="")) {
         document.getElementById('transfer_rate_box-2').value = box1_value;
     }
     else if (op1 == "Bit/s" && op2 == "Byte/s") {
@@ -2862,7 +2863,7 @@ function transfer_rate_box2() {
     let box2_value = document.getElementById('transfer_rate_box-2').value;
     let op1 = document.getElementById('transfer_rate_select-1').value;
     let op2 = document.getElementById('transfer_rate_select-2').value;
-    if (op1 == "Bit/s" && op2 == "Bit/s") {
+    if ((op1 == "Bit/s" && op2 == "Bit/s")||(box2_value=="")) {
         document.getElementById('transfer_rate_box-1').value = box2_value;
     }
     else if (op1 == "Bit/s" && op2 == "Byte/s") {
@@ -3036,7 +3037,7 @@ function angle_box1() {
     let op1 = document.getElementById('angle_select-1').value;
     let op2 = document.getElementById('angle_select-2').value;
     
-    if (op1 == "Degree" && op2 == "Degree") {
+    if ((op1 == "Degree" && op2 == "Degree") ||(box1_value=="")){
         document.getElementById('angle_box-2').value = box1_value;
     }
     else if (op1 == "Degree" && op2 == "Radian") {
@@ -3078,7 +3079,7 @@ function angle_box2() {
     let op1 = document.getElementById('angle_select-1').value;
     let op2 = document.getElementById('angle_select-2').value;
     
-    if (op1 == "Degree" && op2 == "Degree") {
+    if ((op1 == "Degree" && op2 == "Degree")||(box2_value=="")) {
         document.getElementById('angle_box-1').value = box2_value;
     }
     else if (op1 == "Degree" && op2 == "Radian") {
@@ -3146,7 +3147,7 @@ function frequency_box1() {
     let op1 = document.getElementById('frequency_select-1').value;
     let op2 = document.getElementById('frequency_select-2').value;
 
-    if (op1 == "Hertz" && op2 == "Hertz") {
+    if ((op1 == "Hertz" && op2 == "Hertz")||(box1_value=="")) {
         document.getElementById('frequency_box-2').value = box1_value;
     }
     else if (op1 == "Hertz" && op2 == "Kilohertz") {
@@ -3250,7 +3251,7 @@ function frequency_box2() {
     let op1 = document.getElementById('frequency_select-1').value;
     let op2 = document.getElementById('frequency_select-2').value;
 
-    if (op1 == "Hertz" && op2 == "Hertz") {
+    if ((op1 == "Hertz" && op2 == "Hertz")||(box2_value=="")) {
         document.getElementById('frequency_box-1').value = box2_value;
     }
     else if (op1 == "Hertz" && op2 == "Kilohertz") {
@@ -3381,7 +3382,7 @@ function power_box1() {
     let op1 = document.getElementById('power_select-1').value;
     let op2 = document.getElementById('power_select-2').value;
     
-    if (op1 == "Watt" && op2 == "Watt") {
+    if ((op1 == "Watt" && op2 == "Watt")||(box1_value=="")) {
         document.getElementById('power_box-2').value = box1_value;
     }
     else if (op1 == "Watt" && op2 == "Kilowatt") {
@@ -3528,7 +3529,7 @@ function power_box2() {
     let op1 = document.getElementById('power_select-1').value;
     let op2 = document.getElementById('power_select-2').value;
 
-    if (op1 == "Watt" && op2 == "Watt") {
+    if ((op1 == "Watt" && op2 == "Watt")||(box2_value=="")) {
         document.getElementById('power_box-1').value = box2_value;
     }
     else if (op1 == "Watt" && op2 == "Kilowatt") {
@@ -3702,7 +3703,7 @@ function force_box1() {
     let op1 = document.getElementById('force_select-1').value;
     let op2 = document.getElementById('force_select-2').value;
 
-    if (op1 == "Newton" && op2 == "Newton") {
+    if ((op1 == "Newton" && op2 == "Newton")||(box1_value=="")) {
         document.getElementById('force_box-2').value = box1_value;
     }
     else if (op1 == "Newton" && op2 == "Kilonewton") {
@@ -3849,7 +3850,7 @@ function force_box2() {
     let op1 = document.getElementById('force_select-1').value;
     let op2 = document.getElementById('force_select-2').value;
 
-    if (op1 == "Newton" && op2 == "Newton") {
+    if ((op1 == "Newton" && op2 == "Newton")||(box2_value=="")) {
         document.getElementById('force_box-1').value = box2_value;
     }
     else if (op1 == "Newton" && op2 == "Kilonewton") {
@@ -4025,7 +4026,7 @@ function density_box1() {
     let op1 = document.getElementById('density_select-1').value;
     let op2 = document.getElementById('density_select-2').value;
 
-    if (op1 == "Kilogram per cubic meter" && op2 == "Kilogram per cubic meter") {
+    if ((op1 == "Kilogram per cubic meter" && op2 == "Kilogram per cubic meter")||(box1_value=="")) {
         document.getElementById('density_box-2').value = box1_value;
     }
     else if (op1 == "Kilogram per cubic meter" && op2 == "Gram per cubic centimeter") {
@@ -4067,7 +4068,7 @@ function density_box2() {
     let op1 = document.getElementById('density_select-1').value;
     let op2 = document.getElementById('density_select-2').value;
 
-    if (op1 == "Kilogram per cubic meter" && op2 == "Kilogram per cubic meter") {
+    if ((op1 == "Kilogram per cubic meter" && op2 == "Kilogram per cubic meter")||(box2_value=="")) {
         document.getElementById('density_box-1').value = box2_value;
     }
     else if (op1 == "Kilogram per cubic meter" && op2 == "Gram per cubic centimeter") {
