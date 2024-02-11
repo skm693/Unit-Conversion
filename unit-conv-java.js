@@ -4,7 +4,7 @@ function box1() {
     let op1 = document.getElementById('select-1').value;
     let op2 = document.getElementById('select-2').value;
 
-    if ((op1 == "Kilometer" && op2 == "Kilometer")||(box1_value=="")) {
+    if ((op1 == "Kilometer" && op2 == "Kilometer") || (box1_value == "")) {
         document.getElementById('box-2').value = box1_value;
     }
     else if (op1 == "Kilometer" && op2 == "Meter") {
@@ -421,7 +421,7 @@ function box2() {
     let box2_value = document.getElementById('box-2').value;
     let op1 = document.getElementById('select-1').value;
     let op2 = document.getElementById('select-2').value;
-    if ((op1 == "Kilometer" && op2 == "Kilometer")||(box2_value=="")) {
+    if ((op1 == "Kilometer" && op2 == "Kilometer") || (box2_value == "")) {
         document.getElementById('box-1').value = box2_value;
     }
     else if (op1 == "Kilometer" && op2 == "Meter") {
@@ -856,13 +856,15 @@ function his_show() {
     let box2_value = document.getElementById('box-2').value;
     let op1 = document.getElementById('select-1').value;
     let op2 = document.getElementById('select-2').value;
-    document.getElementById('hs_box_1').value = box1_value;
-    document.getElementById('hs_box_2').value = box2_value;
-    document.getElementById('unit1').innerHTML = op1;
-    document.getElementById('unit2').innerHTML = op2;
-    let node = document.getElementById('hi');
-    let clone = node.cloneNode(true);
-    document.getElementById('hist').appendChild(clone);
+    if (box1_value != "") {
+        document.getElementById('hs_box_1').value = box1_value;
+        document.getElementById('hs_box_2').value = box2_value;
+        document.getElementById('unit1').innerHTML = op1;
+        document.getElementById('unit2').innerHTML = op2;
+        let node = document.getElementById('hi');
+        let clone = node.cloneNode(true);
+        document.getElementById('hist').appendChild(clone);
+    }
 
 
 }
@@ -871,13 +873,15 @@ function his_show2() {
     let box2_value = document.getElementById('box-2').value;
     let op1 = document.getElementById('select-1').value;
     let op2 = document.getElementById('select-2').value;
-    document.getElementById('rhs_box_1').value = box1_value;
-    document.getElementById('rhs_box_2').value = box2_value;
-    document.getElementById('runit1').innerHTML = op1;
-    document.getElementById('runit2').innerHTML = op2;
-    let node = document.getElementById('rhi');
-    let clone = node.cloneNode(true);
-    document.getElementById('hist').appendChild(clone);
+    if (box2_value != "") {
+        document.getElementById('rhs_box_1').value = box1_value;
+        document.getElementById('rhs_box_2').value = box2_value;
+        document.getElementById('runit1').innerHTML = op1;
+        document.getElementById('runit2').innerHTML = op2;
+        let node = document.getElementById('rhi');
+        let clone = node.cloneNode(true);
+        document.getElementById('hist').appendChild(clone);
+    }
 }
 
 
@@ -889,7 +893,7 @@ function mass_box1() {
     let box2_value = document.getElementById('ms_box-2').value;
     let op1 = document.getElementById('ms_select-1').value;
     let op2 = document.getElementById('ms_select-2').value;
-    if ((op1 == "Kilogram" && op2 == "Kilogram")||(box1_value=="")) {
+    if ((op1 == "Kilogram" && op2 == "Kilogram") || (box1_value == "")) {
         document.getElementById('ms_box-2').value = box1_value;
     }
     else if (op1 == "Kilogram" && op2 == "Gram") {
@@ -999,13 +1003,15 @@ function mass_his_show() {
     let box2_value = document.getElementById('ms_box-2').value;
     let op1 = document.getElementById('ms_select-1').value;
     let op2 = document.getElementById('ms_select-2').value;
-    document.getElementById('hs_box_1').value = box1_value;
-    document.getElementById('hs_box_2').value = box2_value;
-    document.getElementById('unit1').innerHTML = op1;
-    document.getElementById('unit2').innerHTML = op2;
-    let node = document.getElementById('hi');
-    let clone = node.cloneNode(true);
-    document.getElementById('hist').appendChild(clone);
+    if (box1_value != "") {
+        document.getElementById('hs_box_1').value = box1_value;
+        document.getElementById('hs_box_2').value = box2_value;
+        document.getElementById('unit1').innerHTML = op1;
+        document.getElementById('unit2').innerHTML = op2;
+        let node = document.getElementById('hi');
+        let clone = node.cloneNode(true);
+        document.getElementById('hist').appendChild(clone);
+    }
 
 
 }
@@ -1015,7 +1021,7 @@ function mass_box2() {
     let box2_value = document.getElementById('ms_box-2').value;
     let op1 = document.getElementById('ms_select-1').value;
     let op2 = document.getElementById('ms_select-2').value;
-    if ((op1 == "Kilogram" && op2 == "Kilogram")||(box2_value=="")) {
+    if ((op1 == "Kilogram" && op2 == "Kilogram") || (box2_value == "")) {
         document.getElementById('ms_box-1').value = box2_value;
     }
     else if (op1 == "Kilogram" && op2 == "Gram") {
@@ -1124,13 +1130,15 @@ function mass_his_show2() {
     let box2_value = document.getElementById('ms_box-2').value;
     let op1 = document.getElementById('ms_select-1').value;
     let op2 = document.getElementById('ms_select-2').value;
-    document.getElementById('rhs_box_1').value = box1_value;
-    document.getElementById('rhs_box_2').value = box2_value;
-    document.getElementById('runit1').innerHTML = op1;
-    document.getElementById('runit2').innerHTML = op2;
-    let node = document.getElementById('rhi');
-    let clone = node.cloneNode(true);
-    document.getElementById('hist').appendChild(clone);
+    if (box2_value != "") {
+        document.getElementById('hs_box_1').value = box1_value;
+        document.getElementById('hs_box_2').value = box2_value;
+        document.getElementById('unit1').innerHTML = op1;
+        document.getElementById('unit2').innerHTML = op2;
+        let node = document.getElementById('hi');
+        let clone = node.cloneNode(true);
+        document.getElementById('hist').appendChild(clone);
+    }
 }
 
 function temp_box1() {
@@ -1179,7 +1187,7 @@ function temp_box2() {
     let box2_value = document.getElementById('tm_box-2').value;
     let op1 = document.getElementById('tm_select-1').value;
     let op2 = document.getElementById('tm_select-2').value;
-    if ((op1 == "Celsius" && op2 == "Celsius")||(box2_value=="")) {
+    if ((op1 == "Celsius" && op2 == "Celsius") || (box2_value == "")) {
         document.getElementById('tm_box-1').value = box2_value;
     }
     else if (op1 == "Celsius" && op2 == "Fahrenheit") {
@@ -1223,26 +1231,30 @@ function temp_his_show() {
     let box2_value = document.getElementById('tm_box-2').value;
     let op1 = document.getElementById('tm_select-1').value;
     let op2 = document.getElementById('tm_select-2').value;
-    document.getElementById('hs_box_1').value = box1_value;
-    document.getElementById('hs_box_2').value = box2_value;
-    document.getElementById('unit1').innerHTML = op1;
-    document.getElementById('unit2').innerHTML = op2;
-    let node = document.getElementById('hi');
-    let clone = node.cloneNode(true);
-    document.getElementById('hist').appendChild(clone);
+    if (box1_value != "") {
+        document.getElementById('hs_box_1').value = box1_value;
+        document.getElementById('hs_box_2').value = box2_value;
+        document.getElementById('unit1').innerHTML = op1;
+        document.getElementById('unit2').innerHTML = op2;
+        let node = document.getElementById('hi');
+        let clone = node.cloneNode(true);
+        document.getElementById('hist').appendChild(clone);
+    }
 }
 function temp_his_show2() {
     let box1_value = document.getElementById('tm_box-1').value;
     let box2_value = document.getElementById('tm_box-2').value;
     let op1 = document.getElementById('tm_select-1').value;
     let op2 = document.getElementById('tm_select-2').value;
-    document.getElementById('rhs_box_1').value = box1_value;
-    document.getElementById('rhs_box_2').value = box2_value;
-    document.getElementById('runit1').innerHTML = op1;
-    document.getElementById('runit2').innerHTML = op2;
-    let node = document.getElementById('rhi');
-    let clone = node.cloneNode(true);
-    document.getElementById('hist').appendChild(clone);
+    if (box2_value != "") {
+        document.getElementById('hs_box_1').value = box1_value;
+        document.getElementById('hs_box_2').value = box2_value;
+        document.getElementById('unit1').innerHTML = op1;
+        document.getElementById('unit2').innerHTML = op2;
+        let node = document.getElementById('hi');
+        let clone = node.cloneNode(true);
+        document.getElementById('hist').appendChild(clone);
+    }
 }
 
 function area_box1() {
@@ -1250,7 +1262,7 @@ function area_box1() {
     let box2_value = document.getElementById('area_box-2').value;
     let op1 = document.getElementById('area_select-1').value;
     let op2 = document.getElementById('area_select-2').value;
-    if ((op1 == "Square Meters" && op2 == "Square Meters")||(box1_value=="")) {
+    if ((op1 == "Square Meters" && op2 == "Square Meters") || (box1_value == "")) {
         document.getElementById('area_box-2').value = box1_value;
     }
     else if (op1 == "Square Meters" && op2 == "Square Feet") {
@@ -1318,7 +1330,7 @@ function area_box2() {
     let box2_value = document.getElementById('area_box-2').value;
     let op1 = document.getElementById('area_select-1').value;
     let op2 = document.getElementById('area_select-2').value;
-    if ((op1 == "Square Meters" && op2 == "Square Meters")||(box2_value=="")) {
+    if ((op1 == "Square Meters" && op2 == "Square Meters") || (box2_value == "")) {
         document.getElementById('area_box-1').value = box2_value;
     }
     else if (op1 == "Square Meters" && op2 == "Square Feet") {
@@ -1383,26 +1395,30 @@ function area_his_show() {
     let box2_value = document.getElementById('area_box-2').value;
     let op1 = document.getElementById('area_select-1').value;
     let op2 = document.getElementById('area_select-2').value;
-    document.getElementById('hs_box_1').value = box1_value;
-    document.getElementById('hs_box_2').value = box2_value;
-    document.getElementById('unit1').innerHTML = op1;
-    document.getElementById('unit2').innerHTML = op2;
-    let node = document.getElementById('hi');
-    let clone = node.cloneNode(true);
-    document.getElementById('hist').appendChild(clone);
+    if (box1_value != "") {
+        document.getElementById('hs_box_1').value = box1_value;
+        document.getElementById('hs_box_2').value = box2_value;
+        document.getElementById('unit1').innerHTML = op1;
+        document.getElementById('unit2').innerHTML = op2;
+        let node = document.getElementById('hi');
+        let clone = node.cloneNode(true);
+        document.getElementById('hist').appendChild(clone);
+    }
 }
 function area_his_show2() {
     let box1_value = document.getElementById('area_box-1').value;
     let box2_value = document.getElementById('area_box-2').value;
     let op1 = document.getElementById('area_select-1').value;
     let op2 = document.getElementById('area_select-2').value;
-    document.getElementById('rhs_box_1').value = box1_value;
-    document.getElementById('rhs_box_2').value = box2_value;
-    document.getElementById('runit1').innerHTML = op1;
-    document.getElementById('runit2').innerHTML = op2;
-    let node = document.getElementById('rhi');
-    let clone = node.cloneNode(true);
-    document.getElementById('hist').appendChild(clone);
+    if (box2_value != "") {
+        document.getElementById('hs_box_1').value = box1_value;
+        document.getElementById('hs_box_2').value = box2_value;
+        document.getElementById('unit1').innerHTML = op1;
+        document.getElementById('unit2').innerHTML = op2;
+        let node = document.getElementById('hi');
+        let clone = node.cloneNode(true);
+        document.getElementById('hist').appendChild(clone);
+    }
 }
 
 function energy_box1() {
@@ -1410,7 +1426,7 @@ function energy_box1() {
     let box2_value = document.getElementById('energy_box-2').value;
     let op1 = document.getElementById('energy_select-1').value;
     let op2 = document.getElementById('energy_select-2').value;
-    if ((op1 == "Joules" && op2 == "Joules")||(box1_value=="")) {
+    if ((op1 == "Joules" && op2 == "Joules") || (box1_value == "")) {
         document.getElementById('energy_box-2').value = box1_value;
     }
     else if (op1 == "Joules" && op2 == "Calories") {
@@ -1478,7 +1494,7 @@ function energy_box2() {
     let box2_value = document.getElementById('energy_box-2').value;
     let op1 = document.getElementById('energy_select-1').value;
     let op2 = document.getElementById('energy_select-2').value;
-    if ((op1 == "Joules" && op2 == "Joules")||(box2_value=="")) {
+    if ((op1 == "Joules" && op2 == "Joules") || (box2_value == "")) {
         document.getElementById('energy_box-1').value = box2_value;
     }
     else if (op1 == "Joules" && op2 == "Calories") {
@@ -1545,26 +1561,30 @@ function energy_his_show() {
     let box2_value = document.getElementById('energy_box-2').value;
     let op1 = document.getElementById('energy_select-1').value;
     let op2 = document.getElementById('energy_select-2').value;
-    document.getElementById('hs_box_1').value = box1_value;
-    document.getElementById('hs_box_2').value = box2_value;
-    document.getElementById('unit1').innerHTML = op1;
-    document.getElementById('unit2').innerHTML = op2;
-    let node = document.getElementById('hi');
-    let clone = node.cloneNode(true);
-    document.getElementById('hist').appendChild(clone);
+    if (box1_value != "") {
+        document.getElementById('hs_box_1').value = box1_value;
+        document.getElementById('hs_box_2').value = box2_value;
+        document.getElementById('unit1').innerHTML = op1;
+        document.getElementById('unit2').innerHTML = op2;
+        let node = document.getElementById('hi');
+        let clone = node.cloneNode(true);
+        document.getElementById('hist').appendChild(clone);
+    }
 }
 function energy_his_show2() {
     let box1_value = document.getElementById('energy_box-1').value;
     let box2_value = document.getElementById('energy_box-2').value;
     let op1 = document.getElementById('energy_select-1').value;
     let op2 = document.getElementById('energy_select-2').value;
-    document.getElementById('rhs_box_1').value = box1_value;
-    document.getElementById('rhs_box_2').value = box2_value;
-    document.getElementById('runit1').innerHTML = op1;
-    document.getElementById('runit2').innerHTML = op2;
-    let node = document.getElementById('rhi');
-    let clone = node.cloneNode(true);
-    document.getElementById('hist').appendChild(clone);
+    if (box2_value != "") {
+        document.getElementById('hs_box_1').value = box1_value;
+        document.getElementById('hs_box_2').value = box2_value;
+        document.getElementById('unit1').innerHTML = op1;
+        document.getElementById('unit2').innerHTML = op2;
+        let node = document.getElementById('hi');
+        let clone = node.cloneNode(true);
+        document.getElementById('hist').appendChild(clone);
+    }
 }
 
 function volume_box1() {
@@ -1572,7 +1592,7 @@ function volume_box1() {
     let box2_value = document.getElementById('volume_box-2').value;
     let op1 = document.getElementById('volume_select-1').value;
     let op2 = document.getElementById('volume_select-2').value;
-    if ((op1 == "Liters" && op2 == "Liters")||(box1_value=="")) {
+    if ((op1 == "Liters" && op2 == "Liters") || (box1_value == "")) {
         document.getElementById('volume_box-2').value = box1_value;
     }
     else if (op1 == "Liters" && op2 == "Milliliters") {
@@ -1640,7 +1660,7 @@ function volume_box2() {
     let box2_value = document.getElementById('volume_box-2').value;
     let op1 = document.getElementById('volume_select-1').value;
     let op2 = document.getElementById('volume_select-2').value;
-    if ((op1 == "Liters" && op2 == "Liters")||(box2_value=="")) {
+    if ((op1 == "Liters" && op2 == "Liters") || (box2_value == "")) {
         document.getElementById('volume_box-2').value = box1_value;
     }
     else if (op1 == "Liters" && op2 == "Milliliters") {
@@ -1708,26 +1728,30 @@ function volume_his_show() {
     let box2_value = document.getElementById('volume_box-2').value;
     let op1 = document.getElementById('volume_select-1').value;
     let op2 = document.getElementById('volume_select-2').value;
-    document.getElementById('hs_box_1').value = box1_value;
-    document.getElementById('hs_box_2').value = box2_value;
-    document.getElementById('unit1').innerHTML = op1;
-    document.getElementById('unit2').innerHTML = op2;
-    let node = document.getElementById('hi');
-    let clone = node.cloneNode(true);
-    document.getElementById('hist').appendChild(clone);
+    if (box1_value != "") {
+        document.getElementById('hs_box_1').value = box1_value;
+        document.getElementById('hs_box_2').value = box2_value;
+        document.getElementById('unit1').innerHTML = op1;
+        document.getElementById('unit2').innerHTML = op2;
+        let node = document.getElementById('hi');
+        let clone = node.cloneNode(true);
+        document.getElementById('hist').appendChild(clone);
+    }
 }
 function volume_his_show2() {
     let box1_value = document.getElementById('volume_box-1').value;
     let box2_value = document.getElementById('volume_box-2').value;
     let op1 = document.getElementById('volume_select-1').value;
     let op2 = document.getElementById('volume_select-2').value;
-    document.getElementById('rhs_box_1').value = box1_value;
-    document.getElementById('rhs_box_2').value = box2_value;
-    document.getElementById('runit1').innerHTML = op1;
-    document.getElementById('runit2').innerHTML = op2;
-    let node = document.getElementById('rhi');
-    let clone = node.cloneNode(true);
-    document.getElementById('hist').appendChild(clone);
+    if (box2_value != "") {
+        document.getElementById('hs_box_1').value = box1_value;
+        document.getElementById('hs_box_2').value = box2_value;
+        document.getElementById('unit1').innerHTML = op1;
+        document.getElementById('unit2').innerHTML = op2;
+        let node = document.getElementById('hi');
+        let clone = node.cloneNode(true);
+        document.getElementById('hist').appendChild(clone);
+    }
 }
 
 function speed_box1() {
@@ -1735,7 +1759,7 @@ function speed_box1() {
     let box2_value = document.getElementById('speed_box-2').value;
     let op1 = document.getElementById('speed_select-1').value;
     let op2 = document.getElementById('speed_select-2').value;
-    if ((op1 == "Meters per Second" && op2 == "Meters per Second")||(box1_value=="")) {
+    if ((op1 == "Meters per Second" && op2 == "Meters per Second") || (box1_value == "")) {
         document.getElementById('speed_box-2').value = box1_value;
     }
     else if (op1 == "Meters per Second" && op2 == "Kilometers per Hour") {
@@ -1886,7 +1910,7 @@ function speed_box2() {
     let box2_value = document.getElementById('speed_box-2').value;
     let op1 = document.getElementById('speed_select-1').value;
     let op2 = document.getElementById('speed_select-2').value;
-    if ((op1 == "Kilometers per Hour" && op2 == "Kilometers per Hour")||(box2_value=="")) {
+    if ((op1 == "Kilometers per Hour" && op2 == "Kilometers per Hour") || (box2_value == "")) {
         document.getElementById('speed_box-2').value = box2_value;
     }
     else if (op1 == "Kilometers per Hour" && op2 == "Miles per Hour") {
@@ -1948,7 +1972,7 @@ function speed_box2() {
         document.getElementById('speed_box-1').value = box1_value;
     }
     else if (op1 == "Feet per Second" && op2 == "Knots") {
-        box1_value = box2_value *1.68781;
+        box1_value = box2_value * 1.68781;
         document.getElementById('speed_box-1').value = box1_value;
     }
     else if (op1 == "Feet per Second" && op2 == "Meters per Second") {
@@ -1965,11 +1989,11 @@ function speed_box2() {
         document.getElementById('speed_box-1').value = box2_value;
     }
     else if (op1 == "Meters per Second" && op2 == "Feet per Second") {
-        box1_value = box2_value *0.3048;
+        box1_value = box2_value * 0.3048;
         document.getElementById('speed_box-1').value = box1_value;
     }
     else if (op1 == "Meters per Second" && op2 == "Miles per Hour") {
-        box1_value = box2_value *0.44704;
+        box1_value = box2_value * 0.44704;
         document.getElementById('speed_box-1').value = box1_value;
     }
     else if (op1 == "Meters per Second" && op2 == "Kilometers per Hour") {
@@ -1982,7 +2006,7 @@ function speed_box2() {
     }
 
     else if (op1 == "Meters per Second" && op2 == "Mach") {
-        box1_value = box2_value *340.29;
+        box1_value = box2_value * 340.29;
         document.getElementById('speed_box-1').value = box1_value;
     }
 
@@ -1990,24 +2014,24 @@ function speed_box2() {
         document.getElementById('speed_box-1').value = box2_value;
     }
     else if (op1 == "Knots" && op2 == "Meters per Second") {
-        box1_value = box2_value *1.94384;
+        box1_value = box2_value * 1.94384;
         document.getElementById('speed_box-1').value = box1_value;
     }
     else if (op1 == "Knots" && op2 == "Feet per Second") {
-        box1_value = box2_value *0.592484;
+        box1_value = box2_value * 0.592484;
         document.getElementById('speed_box-1').value = box1_value;
     }
     else if (op1 == "Knots" && op2 == "Miles per Hour") {
-        box1_value = box2_value *0.868976;
+        box1_value = box2_value * 0.868976;
         document.getElementById('speed_box-1').value = box1_value;
     }
     else if (op1 == "Knots" && op2 == "Kilometers per Hour") {
-        box1_value = box2_value *0.539957;
+        box1_value = box2_value * 0.539957;
         document.getElementById('speed_box-1').value = box1_value;
     }
 
     else if (op1 == "Knots" && op2 == "Mach") {
-        box1_value = box2_value *661.47;
+        box1_value = box2_value * 661.47;
         document.getElementById('speed_box-1').value = box1_value;
     }
 
@@ -2015,23 +2039,23 @@ function speed_box2() {
         document.getElementById('speed_box-1').value = box2_value;
     }
     else if (op1 == "Mach" && op2 == "Meters per Second") {
-        box1_value = box2_value *0.00293858;
+        box1_value = box2_value * 0.00293858;
         document.getElementById('speed_box-1').value = box1_value;
     }
     else if (op1 == "Mach" && op2 == "Feet per Second") {
-        box1_value = box2_value *0.000887259;
+        box1_value = box2_value * 0.000887259;
         document.getElementById('speed_box-1').value = box1_value;
     }
     else if (op1 == "Mach" && op2 == "Miles per Hour") {
-        box1_value = box2_value *0.00131475;
+        box1_value = box2_value * 0.00131475;
         document.getElementById('speed_box-1').value = box1_value;
     }
     else if (op1 == "Mach" && op2 == "Kilometers per Hour") {
-        box1_value = box2_value *0.000816421;
+        box1_value = box2_value * 0.000816421;
         document.getElementById('speed_box-1').value = box1_value;
     }
     else if (op1 == "Mach" && op2 == "Knots") {
-        box1_value = box2_value *0.00130332;
+        box1_value = box2_value * 0.00130332;
         document.getElementById('speed_box-1').value = box1_value;
     }
 
@@ -2043,33 +2067,37 @@ function speed_his_show() {
     let box2_value = document.getElementById('speed_box-2').value;
     let op1 = document.getElementById('speed_select-1').value;
     let op2 = document.getElementById('speed_select-2').value;
-    document.getElementById('hs_box_1').value = box1_value;
-    document.getElementById('hs_box_2').value = box2_value;
-    document.getElementById('unit1').innerHTML = op1;
-    document.getElementById('unit2').innerHTML = op2;
-    let node = document.getElementById('hi');
-    let clone = node.cloneNode(true);
-    document.getElementById('hist').appendChild(clone);
+    if (box1_value != "") {
+        document.getElementById('hs_box_1').value = box1_value;
+        document.getElementById('hs_box_2').value = box2_value;
+        document.getElementById('unit1').innerHTML = op1;
+        document.getElementById('unit2').innerHTML = op2;
+        let node = document.getElementById('hi');
+        let clone = node.cloneNode(true);
+        document.getElementById('hist').appendChild(clone);
+    }
 }
 function speed_his_show2() {
     let box1_value = document.getElementById('speed_box-1').value;
     let box2_value = document.getElementById('speed_box-2').value;
     let op1 = document.getElementById('speed_select-1').value;
     let op2 = document.getElementById('speed_select-2').value;
-    document.getElementById('rhs_box_1').value = box1_value;
-    document.getElementById('rhs_box_2').value = box2_value;
-    document.getElementById('runit1').innerHTML = op1;
-    document.getElementById('runit2').innerHTML = op2;
-    let node = document.getElementById('rhi');
-    let clone = node.cloneNode(true);
-    document.getElementById('hist').appendChild(clone);
+    if (box2_value != "") {
+        document.getElementById('hs_box_1').value = box1_value;
+        document.getElementById('hs_box_2').value = box2_value;
+        document.getElementById('unit1').innerHTML = op1;
+        document.getElementById('unit2').innerHTML = op2;
+        let node = document.getElementById('hi');
+        let clone = node.cloneNode(true);
+        document.getElementById('hist').appendChild(clone);
+    }
 }
 function pressure_box1() {
     let box1_value = document.getElementById('pressure_box-1').value;
     let box2_value = document.getElementById('pressure_box-2').value;
     let op1 = document.getElementById('pressure_select-1').value;
     let op2 = document.getElementById('pressure_select-2').value;
-    if ((op1 == "Pascal" && op2 == "Pascal")||(box1_value=="")) {
+    if ((op1 == "Pascal" && op2 == "Pascal") || (box1_value == "")) {
         document.getElementById('pressure_box-2').value = box1_value;
     }
     else if (op1 == "Pascal" && op2 == "Hectopascal") {
@@ -2207,11 +2235,11 @@ function pressure_box1() {
     else if (op1 == "Millimeter of Mercury" && op2 == "Millimeter of Mercury") {
         document.getElementById('pressure_box-2').value = box1_value;
     }
-    
+
     pressure_his_show();
-    
-    
-    
+
+
+
 }
 
 function pressure_box2() {
@@ -2219,7 +2247,7 @@ function pressure_box2() {
     let box2_value = document.getElementById('pressure_box-2').value;
     let op1 = document.getElementById('pressure_select-1').value;
     let op2 = document.getElementById('pressure_select-2').value;
-    if ((op1 == "Pascal" && op2 == "Pascal")||(box2_value=="")) {
+    if ((op1 == "Pascal" && op2 == "Pascal") || (box2_value == "")) {
         document.getElementById('pressure_box-1').value = box2_value;
     }
     else if (op1 == "Pascal" && op2 == "Hectopascal") {
@@ -2231,7 +2259,7 @@ function pressure_box2() {
         document.getElementById('pressure_box-1').value = box1_value;
     }
     else if (op1 == "Pascal" && op2 == "Bar") {
-        box1_value = box2_value *100000;
+        box1_value = box2_value * 100000;
         document.getElementById('pressure_box-1').value = box1_value;
     }
     else if (op1 == "Pascal" && op2 == "Atmosphere") {
@@ -2304,7 +2332,7 @@ function pressure_box2() {
         document.getElementById('pressure_box-1').value = box2_value;
     }
     else if (op1 == "Bar" && op2 == "Atmosphere") {
-        box1_value = box2_value *1.01325;
+        box1_value = box2_value * 1.01325;
         document.getElementById('pressure_box-1').value = box1_value;
     }
     else if (op1 == "Bar" && op2 == "Millimeter of Mercury") {
@@ -2312,7 +2340,7 @@ function pressure_box2() {
         document.getElementById('pressure_box-1').value = box1_value;
     }
     else if (op1 == "Atmosphere" && op2 == "Pascal") {
-        box1_value = box2_value *0.0000098692;
+        box1_value = box2_value * 0.0000098692;
         document.getElementById('pressure_box-1').value = box1_value;
     }
     else if (op1 == "Atmosphere" && op2 == "Hectopascal") {
@@ -2358,36 +2386,40 @@ function pressure_box2() {
         document.getElementById('pressure_box-1').value = box2_value;
     }
     pressure_his_show2();
-    
-    
-    
-    
+
+
+
+
 }
 function pressure_his_show() {
     let box1_value = document.getElementById('pressure_box-1').value;
     let box2_value = document.getElementById('pressure_box-2').value;
     let op1 = document.getElementById('pressure_select-1').value;
     let op2 = document.getElementById('pressure_select-2').value;
-    document.getElementById('hs_box_1').value = box1_value;
-    document.getElementById('hs_box_2').value = box2_value;
-    document.getElementById('unit1').innerHTML = op1;
-    document.getElementById('unit2').innerHTML = op2;
-    let node = document.getElementById('hi');
-    let clone = node.cloneNode(true);
-    document.getElementById('hist').appendChild(clone);
+    if (box1_value != "") {
+        document.getElementById('hs_box_1').value = box1_value;
+        document.getElementById('hs_box_2').value = box2_value;
+        document.getElementById('unit1').innerHTML = op1;
+        document.getElementById('unit2').innerHTML = op2;
+        let node = document.getElementById('hi');
+        let clone = node.cloneNode(true);
+        document.getElementById('hist').appendChild(clone);
+    }
 }
 function pressure_his_show2() {
     let box1_value = document.getElementById('pressure_box-1').value;
     let box2_value = document.getElementById('pressure_box-2').value;
     let op1 = document.getElementById('pressure_select-1').value;
     let op2 = document.getElementById('pressure_select-2').value;
-    document.getElementById('rhs_box_1').value = box1_value;
-    document.getElementById('rhs_box_2').value = box2_value;
-    document.getElementById('runit1').innerHTML = op1;
-    document.getElementById('runit2').innerHTML = op2;
-    let node = document.getElementById('rhi');
-    let clone = node.cloneNode(true);
-    document.getElementById('hist').appendChild(clone);
+    if (box2_value != "") {
+        document.getElementById('hs_box_1').value = box1_value;
+        document.getElementById('hs_box_2').value = box2_value;
+        document.getElementById('unit1').innerHTML = op1;
+        document.getElementById('unit2').innerHTML = op2;
+        let node = document.getElementById('hi');
+        let clone = node.cloneNode(true);
+        document.getElementById('hist').appendChild(clone);
+    }
 }
 
 function storage_box1() {
@@ -2395,7 +2427,7 @@ function storage_box1() {
     let box2_value = document.getElementById('storage_box-2').value;
     let op1 = document.getElementById('storage_select-1').value;
     let op2 = document.getElementById('storage_select-2').value;
-    if ((op1 == "Bit" && op2 == "Bit")||(box1_value=="")) {
+    if ((op1 == "Bit" && op2 == "Bit") || (box1_value == "")) {
         document.getElementById('storage_box-2').value = box1_value;
     }
     else if (op1 == "Bit" && op2 == "Byte") {
@@ -2533,8 +2565,8 @@ function storage_box1() {
     }
     else if (op1 == "Terabyte" && op2 == "Terabyte") {
         document.getElementById('storage_box-2').value = box1_value;
-    }  
-    storage_his_show();  
+    }
+    storage_his_show();
 }
 
 
@@ -2544,7 +2576,7 @@ function storage_box2() {
     let box2_value = document.getElementById('storage_box-2').value;
     let op1 = document.getElementById('storage_select-1').value;
     let op2 = document.getElementById('storage_select-2').value;
-    if ((op1 == "Bit" && op2 == "Bit")||(box2_value=="")) {
+    if ((op1 == "Bit" && op2 == "Bit") || (box2_value == "")) {
         document.getElementById('storage_box-1').value = box2_value;
     }
     else if (op1 == "Bit" && op2 == "Byte") {
@@ -2682,7 +2714,7 @@ function storage_box2() {
     }
     else if (op1 == "Terabyte" && op2 == "Terabyte") {
         document.getElementById('storage_box-1').value = box2_value;
-    } 
+    }
     storage_his_show2();
 }
 function storage_his_show() {
@@ -2690,26 +2722,30 @@ function storage_his_show() {
     let box2_value = document.getElementById('storage_box-2').value;
     let op1 = document.getElementById('storage_select-1').value;
     let op2 = document.getElementById('storage_select-2').value;
-    document.getElementById('hs_box_1').value = box1_value;
-    document.getElementById('hs_box_2').value = box2_value;
-    document.getElementById('unit1').innerHTML = op1;
-    document.getElementById('unit2').innerHTML = op2;
-    let node = document.getElementById('hi');
-    let clone = node.cloneNode(true);
-    document.getElementById('hist').appendChild(clone);
+    if (box1_value != "") {
+        document.getElementById('hs_box_1').value = box1_value;
+        document.getElementById('hs_box_2').value = box2_value;
+        document.getElementById('unit1').innerHTML = op1;
+        document.getElementById('unit2').innerHTML = op2;
+        let node = document.getElementById('hi');
+        let clone = node.cloneNode(true);
+        document.getElementById('hist').appendChild(clone);
+    }
 }
 function storage_his_show2() {
     let box1_value = document.getElementById('storage_box-1').value;
     let box2_value = document.getElementById('storage_box-2').value;
     let op1 = document.getElementById('storage_select-1').value;
     let op2 = document.getElementById('storage_select-2').value;
-    document.getElementById('rhs_box_1').value = box1_value;
-    document.getElementById('rhs_box_2').value = box2_value;
-    document.getElementById('runit1').innerHTML = op1;
-    document.getElementById('runit2').innerHTML = op2;
-    let node = document.getElementById('rhi');
-    let clone = node.cloneNode(true);
-    document.getElementById('hist').appendChild(clone);
+    if (box2_value != "") {
+        document.getElementById('hs_box_1').value = box1_value;
+        document.getElementById('hs_box_2').value = box2_value;
+        document.getElementById('unit1').innerHTML = op1;
+        document.getElementById('unit2').innerHTML = op2;
+        let node = document.getElementById('hi');
+        let clone = node.cloneNode(true);
+        document.getElementById('hist').appendChild(clone);
+    }
 }
 
 function transfer_rate_box1() {
@@ -2717,7 +2753,7 @@ function transfer_rate_box1() {
     let box2_value = document.getElementById('transfer_rate_box-2').value;
     let op1 = document.getElementById('transfer_rate_select-1').value;
     let op2 = document.getElementById('transfer_rate_select-2').value;
-    if ((op1 == "Bit/s" && op2 == "Bit/s")||(box1_value=="")) {
+    if ((op1 == "Bit/s" && op2 == "Bit/s") || (box1_value == "")) {
         document.getElementById('transfer_rate_box-2').value = box1_value;
     }
     else if (op1 == "Bit/s" && op2 == "Byte/s") {
@@ -2863,7 +2899,7 @@ function transfer_rate_box2() {
     let box2_value = document.getElementById('transfer_rate_box-2').value;
     let op1 = document.getElementById('transfer_rate_select-1').value;
     let op2 = document.getElementById('transfer_rate_select-2').value;
-    if ((op1 == "Bit/s" && op2 == "Bit/s")||(box2_value=="")) {
+    if ((op1 == "Bit/s" && op2 == "Bit/s") || (box2_value == "")) {
         document.getElementById('transfer_rate_box-1').value = box2_value;
     }
     else if (op1 == "Bit/s" && op2 == "Byte/s") {
@@ -3009,26 +3045,30 @@ function data_transfer_his_show() {
     let box2_value = document.getElementById('transfer_rate_box-2').value;
     let op1 = document.getElementById('transfer_rate_select-1').value;
     let op2 = document.getElementById('transfer_rate_select-2').value;
-    document.getElementById('hs_box_1').value = box1_value;
-    document.getElementById('hs_box_2').value = box2_value;
-    document.getElementById('unit1').innerHTML = op1;
-    document.getElementById('unit2').innerHTML = op2;
-    let node = document.getElementById('hi');
-    let clone = node.cloneNode(true);
-    document.getElementById('hist').appendChild(clone);
+    if (box1_value != "") {
+        document.getElementById('hs_box_1').value = box1_value;
+        document.getElementById('hs_box_2').value = box2_value;
+        document.getElementById('unit1').innerHTML = op1;
+        document.getElementById('unit2').innerHTML = op2;
+        let node = document.getElementById('hi');
+        let clone = node.cloneNode(true);
+        document.getElementById('hist').appendChild(clone);
+    }
 }
 function data_transfer_his_show2() {
     let box1_value = document.getElementById('transfer_rate_box-1').value;
     let box2_value = document.getElementById('transfer_rate_box-2').value;
     let op1 = document.getElementById('transfer_rate_select-1').value;
     let op2 = document.getElementById('transfer_rate_select-2').value;
-    document.getElementById('rhs_box_1').value = box1_value;
-    document.getElementById('rhs_box_2').value = box2_value;
-    document.getElementById('runit1').innerHTML = op1;
-    document.getElementById('runit2').innerHTML = op2;
-    let node = document.getElementById('rhi');
-    let clone = node.cloneNode(true);
-    document.getElementById('hist').appendChild(clone);
+    if (box2_value != "") {
+        document.getElementById('hs_box_1').value = box1_value;
+        document.getElementById('hs_box_2').value = box2_value;
+        document.getElementById('unit1').innerHTML = op1;
+        document.getElementById('unit2').innerHTML = op2;
+        let node = document.getElementById('hi');
+        let clone = node.cloneNode(true);
+        document.getElementById('hist').appendChild(clone);
+    }
 }
 
 function angle_box1() {
@@ -3036,8 +3076,8 @@ function angle_box1() {
     let box2_value = document.getElementById('angle_box-2').value;
     let op1 = document.getElementById('angle_select-1').value;
     let op2 = document.getElementById('angle_select-2').value;
-    
-    if ((op1 == "Degree" && op2 == "Degree") ||(box1_value=="")){
+
+    if ((op1 == "Degree" && op2 == "Degree") || (box1_value == "")) {
         document.getElementById('angle_box-2').value = box1_value;
     }
     else if (op1 == "Degree" && op2 == "Radian") {
@@ -3078,8 +3118,8 @@ function angle_box2() {
     let box2_value = document.getElementById('angle_box-2').value;
     let op1 = document.getElementById('angle_select-1').value;
     let op2 = document.getElementById('angle_select-2').value;
-    
-    if ((op1 == "Degree" && op2 == "Degree")||(box2_value=="")) {
+
+    if ((op1 == "Degree" && op2 == "Degree") || (box2_value == "")) {
         document.getElementById('angle_box-1').value = box2_value;
     }
     else if (op1 == "Degree" && op2 == "Radian") {
@@ -3120,26 +3160,30 @@ function angle_his_show() {
     let box2_value = document.getElementById('angle_box-2').value;
     let op1 = document.getElementById('angle_select-1').value;
     let op2 = document.getElementById('angle_select-2').value;
-    document.getElementById('hs_box_1').value = box1_value;
-    document.getElementById('hs_box_2').value = box2_value;
-    document.getElementById('unit1').innerHTML = op1;
-    document.getElementById('unit2').innerHTML = op2;
-    let node = document.getElementById('hi');
-    let clone = node.cloneNode(true);
-    document.getElementById('hist').appendChild(clone);
+    if (box1_value != "") {
+        document.getElementById('hs_box_1').value = box1_value;
+        document.getElementById('hs_box_2').value = box2_value;
+        document.getElementById('unit1').innerHTML = op1;
+        document.getElementById('unit2').innerHTML = op2;
+        let node = document.getElementById('hi');
+        let clone = node.cloneNode(true);
+        document.getElementById('hist').appendChild(clone);
+    }
 }
 function angle_his_show2() {
     let box1_value = document.getElementById('angle_box-1').value;
     let box2_value = document.getElementById('angle_box-2').value;
     let op1 = document.getElementById('angle_select-1').value;
     let op2 = document.getElementById('angle_select-2').value;
-    document.getElementById('rhs_box_1').value = box1_value;
-    document.getElementById('rhs_box_2').value = box2_value;
-    document.getElementById('runit1').innerHTML = op1;
-    document.getElementById('runit2').innerHTML = op2;
-    let node = document.getElementById('rhi');
-    let clone = node.cloneNode(true);
-    document.getElementById('hist').appendChild(clone);
+    if (box2_value != "") {
+        document.getElementById('hs_box_1').value = box1_value;
+        document.getElementById('hs_box_2').value = box2_value;
+        document.getElementById('unit1').innerHTML = op1;
+        document.getElementById('unit2').innerHTML = op2;
+        let node = document.getElementById('hi');
+        let clone = node.cloneNode(true);
+        document.getElementById('hist').appendChild(clone);
+    }
 }
 function frequency_box1() {
     let box1_value = document.getElementById('frequency_box-1').value;
@@ -3147,7 +3191,7 @@ function frequency_box1() {
     let op1 = document.getElementById('frequency_select-1').value;
     let op2 = document.getElementById('frequency_select-2').value;
 
-    if ((op1 == "Hertz" && op2 == "Hertz")||(box1_value=="")) {
+    if ((op1 == "Hertz" && op2 == "Hertz") || (box1_value == "")) {
         document.getElementById('frequency_box-2').value = box1_value;
     }
     else if (op1 == "Hertz" && op2 == "Kilohertz") {
@@ -3251,7 +3295,7 @@ function frequency_box2() {
     let op1 = document.getElementById('frequency_select-1').value;
     let op2 = document.getElementById('frequency_select-2').value;
 
-    if ((op1 == "Hertz" && op2 == "Hertz")||(box2_value=="")) {
+    if ((op1 == "Hertz" && op2 == "Hertz") || (box2_value == "")) {
         document.getElementById('frequency_box-1').value = box2_value;
     }
     else if (op1 == "Hertz" && op2 == "Kilohertz") {
@@ -3354,26 +3398,30 @@ function frequency_his_show() {
     let box2_value = document.getElementById('frequency_box-2').value;
     let op1 = document.getElementById('frequency_select-1').value;
     let op2 = document.getElementById('frequency_select-2').value;
-    document.getElementById('hs_box_1').value = box1_value;
-    document.getElementById('hs_box_2').value = box2_value;
-    document.getElementById('unit1').innerHTML = op1;
-    document.getElementById('unit2').innerHTML = op2;
-    let node = document.getElementById('hi');
-    let clone = node.cloneNode(true);
-    document.getElementById('hist').appendChild(clone);
+    if (box1_value != "") {
+        document.getElementById('hs_box_1').value = box1_value;
+        document.getElementById('hs_box_2').value = box2_value;
+        document.getElementById('unit1').innerHTML = op1;
+        document.getElementById('unit2').innerHTML = op2;
+        let node = document.getElementById('hi');
+        let clone = node.cloneNode(true);
+        document.getElementById('hist').appendChild(clone);
+    }
 }
 function frequency_his_show2() {
     let box1_value = document.getElementById('frequency_box-1').value;
     let box2_value = document.getElementById('frequency_box-2').value;
     let op1 = document.getElementById('frequency_select-1').value;
     let op2 = document.getElementById('frequency_select-2').value;
-    document.getElementById('rhs_box_1').value = box1_value;
-    document.getElementById('rhs_box_2').value = box2_value;
-    document.getElementById('runit1').innerHTML = op1;
-    document.getElementById('runit2').innerHTML = op2;
-    let node = document.getElementById('rhi');
-    let clone = node.cloneNode(true);
-    document.getElementById('hist').appendChild(clone);
+    if (box2_value != "") {
+        document.getElementById('hs_box_1').value = box1_value;
+        document.getElementById('hs_box_2').value = box2_value;
+        document.getElementById('unit1').innerHTML = op1;
+        document.getElementById('unit2').innerHTML = op2;
+        let node = document.getElementById('hi');
+        let clone = node.cloneNode(true);
+        document.getElementById('hist').appendChild(clone);
+    }
 }
 
 function power_box1() {
@@ -3381,8 +3429,8 @@ function power_box1() {
     let box2_value = document.getElementById('power_box-2').value;
     let op1 = document.getElementById('power_select-1').value;
     let op2 = document.getElementById('power_select-2').value;
-    
-    if ((op1 == "Watt" && op2 == "Watt")||(box1_value=="")) {
+
+    if ((op1 == "Watt" && op2 == "Watt") || (box1_value == "")) {
         document.getElementById('power_box-2').value = box1_value;
     }
     else if (op1 == "Watt" && op2 == "Kilowatt") {
@@ -3402,7 +3450,7 @@ function power_box1() {
         document.getElementById('power_box-2').value = box2_value;
     }
     else if (op1 == "Watt" && op2 == "Horsepower") {
-        box2_value = box1_value / 745.7; 
+        box2_value = box1_value / 745.7;
         document.getElementById('power_box-2').value = box2_value;
     }
     else if (op1 == "Kilowatt" && op2 == "Watt") {
@@ -3425,7 +3473,7 @@ function power_box1() {
         document.getElementById('power_box-2').value = box2_value;
     }
     else if (op1 == "Kilowatt" && op2 == "Horsepower") {
-        box2_value = box1_value * 1.341; 
+        box2_value = box1_value * 1.341;
         document.getElementById('power_box-2').value = box2_value;
     }
     else if (op1 == "Megawatt" && op2 == "Watt") {
@@ -3448,7 +3496,7 @@ function power_box1() {
         document.getElementById('power_box-2').value = box2_value;
     }
     else if (op1 == "Megawatt" && op2 == "Horsepower") {
-        box2_value = box1_value * 1341.02; 
+        box2_value = box1_value * 1341.02;
         document.getElementById('power_box-2').value = box2_value;
     }
     else if (op1 == "Gigawatt" && op2 == "Watt") {
@@ -3494,27 +3542,27 @@ function power_box1() {
         document.getElementById('power_box-2').value = box1_value;
     }
     else if (op1 == "Terawatt" && op2 == "Horsepower") {
-        box2_value = box1_value * 1.341e+9; 
+        box2_value = box1_value * 1.341e+9;
         document.getElementById('power_box-2').value = box2_value;
     }
     else if (op1 == "Horsepower" && op2 == "Watt") {
-        box2_value = box1_value * 745.7; 
+        box2_value = box1_value * 745.7;
         document.getElementById('power_box-2').value = box2_value;
     }
     else if (op1 == "Horsepower" && op2 == "Kilowatt") {
-        box2_value = box1_value * 0.7457; 
+        box2_value = box1_value * 0.7457;
         document.getElementById('power_box-2').value = box2_value;
     }
     else if (op1 == "Horsepower" && op2 == "Megawatt") {
-        box2_value = box1_value * 0.0007457; 
+        box2_value = box1_value * 0.0007457;
         document.getElementById('power_box-2').value = box2_value;
     }
     else if (op1 == "Horsepower" && op2 == "Gigawatt") {
-        box2_value = box1_value * 7.457e-7; 
+        box2_value = box1_value * 7.457e-7;
         document.getElementById('power_box-2').value = box2_value;
     }
     else if (op1 == "Horsepower" && op2 == "Terawatt") {
-        box2_value = box1_value * 7.457e-10; 
+        box2_value = box1_value * 7.457e-10;
         document.getElementById('power_box-2').value = box2_value;
     }
     else if (op1 == "Horsepower" && op2 == "Horsepower") {
@@ -3529,7 +3577,7 @@ function power_box2() {
     let op1 = document.getElementById('power_select-1').value;
     let op2 = document.getElementById('power_select-2').value;
 
-    if ((op1 == "Watt" && op2 == "Watt")||(box2_value=="")) {
+    if ((op1 == "Watt" && op2 == "Watt") || (box2_value == "")) {
         document.getElementById('power_box-1').value = box2_value;
     }
     else if (op1 == "Watt" && op2 == "Kilowatt") {
@@ -3549,7 +3597,7 @@ function power_box2() {
         document.getElementById('power_box-1').value = box1_value;
     }
     else if (op1 == "Watt" && op2 == "Horsepower") {
-        box1_value = box2_value / 745.7; 
+        box1_value = box2_value / 745.7;
         document.getElementById('power_box-1').value = box1_value;
     }
     else if (op1 == "Kilowatt" && op2 == "Watt") {
@@ -3572,7 +3620,7 @@ function power_box2() {
         document.getElementById('power_box-1').value = box1_value;
     }
     else if (op1 == "Kilowatt" && op2 == "Horsepower") {
-        box1_value = box2_value * 1.341; 
+        box1_value = box2_value * 1.341;
         document.getElementById('power_box-1').value = box1_value;
     }
     else if (op1 == "Megawatt" && op2 == "Watt") {
@@ -3618,7 +3666,7 @@ function power_box2() {
         document.getElementById('power_box-1').value = box1_value;
     }
     else if (op1 == "Gigawatt" && op2 == "Horsepower") {
-        box1_value = box2_value * 1.341e+6; 
+        box1_value = box2_value * 1.341e+6;
         document.getElementById('power_box-1').value = box1_value;
     }
     else if (op1 == "Terawatt" && op2 == "Watt") {
@@ -3641,33 +3689,33 @@ function power_box2() {
         document.getElementById('power_box-1').value = box2_value;
     }
     else if (op1 == "Terawatt" && op2 == "Horsepower") {
-        box1_value = box2_value * 1.341e+9; 
+        box1_value = box2_value * 1.341e+9;
         document.getElementById('power_box-1').value = box1_value;
     }
     else if (op1 == "Horsepower" && op2 == "Watt") {
-        box1_value = box2_value * 745.7; 
+        box1_value = box2_value * 745.7;
         document.getElementById('power_box-1').value = box1_value;
     }
     else if (op1 == "Horsepower" && op2 == "Kilowatt") {
-        box1_value = box2_value * 0.7457; 
+        box1_value = box2_value * 0.7457;
         document.getElementById('power_box-1').value = box1_value;
     }
     else if (op1 == "Horsepower" && op2 == "Megawatt") {
-        box1_value = box2_value * 0.0007457; 
+        box1_value = box2_value * 0.0007457;
         document.getElementById('power_box-1').value = box1_value;
     }
     else if (op1 == "Horsepower" && op2 == "Gigawatt") {
-        box1_value = box2_value * 7.457e-7; 
+        box1_value = box2_value * 7.457e-7;
         document.getElementById('power_box-1').value = box1_value;
     }
     else if (op1 == "Horsepower" && op2 == "Terawatt") {
-        box1_value = box2_value * 7.457e-10; 
+        box1_value = box2_value * 7.457e-10;
         document.getElementById('power_box-1').value = box1_value;
     }
     else if (op1 == "Horsepower" && op2 == "Horsepower") {
         document.getElementById('power_box-1').value = box2_value;
     }
-   power_his_show2();
+    power_his_show2();
 }
 
 function power_his_show() {
@@ -3675,26 +3723,30 @@ function power_his_show() {
     let box2_value = document.getElementById('power_box-2').value;
     let op1 = document.getElementById('power_select-1').value;
     let op2 = document.getElementById('power_select-2').value;
-    document.getElementById('hs_box_1').value = box1_value;
-    document.getElementById('hs_box_2').value = box2_value;
-    document.getElementById('unit1').innerHTML = op1;
-    document.getElementById('unit2').innerHTML = op2;
-    let node = document.getElementById('hi');
-    let clone = node.cloneNode(true);
-    document.getElementById('hist').appendChild(clone);
+    if (box1_value != "") {
+        document.getElementById('hs_box_1').value = box1_value;
+        document.getElementById('hs_box_2').value = box2_value;
+        document.getElementById('unit1').innerHTML = op1;
+        document.getElementById('unit2').innerHTML = op2;
+        let node = document.getElementById('hi');
+        let clone = node.cloneNode(true);
+        document.getElementById('hist').appendChild(clone);
+    }
 }
 function power_his_show2() {
     let box1_value = document.getElementById('power_box-1').value;
     let box2_value = document.getElementById('power_box-2').value;
     let op1 = document.getElementById('power_select-1').value;
     let op2 = document.getElementById('power_select-2').value;
-    document.getElementById('rhs_box_1').value = box1_value;
-    document.getElementById('rhs_box_2').value = box2_value;
-    document.getElementById('runit1').innerHTML = op1;
-    document.getElementById('runit2').innerHTML = op2;
-    let node = document.getElementById('rhi');
-    let clone = node.cloneNode(true);
-    document.getElementById('hist').appendChild(clone);
+    if (box2_value != "") {
+        document.getElementById('hs_box_1').value = box1_value;
+        document.getElementById('hs_box_2').value = box2_value;
+        document.getElementById('unit1').innerHTML = op1;
+        document.getElementById('unit2').innerHTML = op2;
+        let node = document.getElementById('hi');
+        let clone = node.cloneNode(true);
+        document.getElementById('hist').appendChild(clone);
+    }
 }
 
 function force_box1() {
@@ -3703,7 +3755,7 @@ function force_box1() {
     let op1 = document.getElementById('force_select-1').value;
     let op2 = document.getElementById('force_select-2').value;
 
-    if ((op1 == "Newton" && op2 == "Newton")||(box1_value=="")) {
+    if ((op1 == "Newton" && op2 == "Newton") || (box1_value == "")) {
         document.getElementById('force_box-2').value = box1_value;
     }
     else if (op1 == "Newton" && op2 == "Kilonewton") {
@@ -3715,15 +3767,15 @@ function force_box1() {
         document.getElementById('force_box-2').value = box2_value;
     }
     else if (op1 == "Newton" && op2 == "Pound-force") {
-        box2_value = box1_value / 4.44822; 
+        box2_value = box1_value / 4.44822;
         document.getElementById('force_box-2').value = box2_value;
     }
     else if (op1 == "Newton" && op2 == "Poundal") {
-        box2_value = box1_value / 0.138255; 
+        box2_value = box1_value / 0.138255;
         document.getElementById('force_box-2').value = box2_value;
     }
     else if (op1 == "Newton" && op2 == "Kilogram-force") {
-        box2_value = box1_value / 9.80665; 
+        box2_value = box1_value / 9.80665;
         document.getElementById('force_box-2').value = box2_value;
     }
     else if (op1 == "Kilonewton" && op2 == "Newton") {
@@ -3761,7 +3813,7 @@ function force_box1() {
         document.getElementById('force_box-2').value = box1_value;
     }
     else if (op1 == "Dyne" && op2 == "Pound-force") {
-        box2_value = box1_value / 444822.161; 
+        box2_value = box1_value / 444822.161;
         document.getElementById('force_box-2').value = box2_value;
     }
     else if (op1 == "Dyne" && op2 == "Poundal") {
@@ -3773,7 +3825,7 @@ function force_box1() {
         document.getElementById('force_box-2').value = box2_value;
     }
     else if (op1 == "Pound-force" && op2 == "Newton") {
-        box2_value = box1_value * 4.44822; 
+        box2_value = box1_value * 4.44822;
         document.getElementById('force_box-2').value = box2_value;
     }
     else if (op1 == "Pound-force" && op2 == "Kilonewton") {
@@ -3781,61 +3833,61 @@ function force_box1() {
         document.getElementById('force_box-2').value = box2_value;
     }
     else if (op1 == "Pound-force" && op2 == "Dyne") {
-        box2_value = box1_value * 444822.161; 
+        box2_value = box1_value * 444822.161;
         document.getElementById('force_box-2').value = box2_value;
     }
     else if (op1 == "Pound-force" && op2 == "Pound-force") {
         document.getElementById('force_box-2').value = box1_value;
     }
     else if (op1 == "Pound-force" && op2 == "Poundal") {
-        box2_value = box1_value * 32.174; 
+        box2_value = box1_value * 32.174;
         document.getElementById('force_box-2').value = box2_value;
     }
     else if (op1 == "Pound-force" && op2 == "Kilogram-force") {
-        box2_value = box1_value / 2.20462; 
+        box2_value = box1_value / 2.20462;
         document.getElementById('force_box-2').value = box2_value;
     }
     else if (op1 == "Poundal" && op2 == "Newton") {
-        box2_value = box1_value * 0.138255; 
+        box2_value = box1_value * 0.138255;
         document.getElementById('force_box-2').value = box2_value;
     }
     else if (op1 == "Poundal" && op2 == "Kilonewton") {
-        box2_value = box1_value * 1.38255e-4; 
+        box2_value = box1_value * 1.38255e-4;
         document.getElementById('force_box-2').value = box2_value;
     }
     else if (op1 == "Poundal" && op2 == "Dyne") {
-        box2_value = box1_value * 13825.5; 
+        box2_value = box1_value * 13825.5;
         document.getElementById('force_box-2').value = box2_value;
     }
     else if (op1 == "Poundal" && op2 == "Pound-force") {
-        box2_value = box1_value / 32.174; 
+        box2_value = box1_value / 32.174;
         document.getElementById('force_box-2').value = box2_value;
     }
     else if (op1 == "Poundal" && op2 == "Poundal") {
         document.getElementById('force_box-2').value = box1_value;
     }
     else if (op1 == "Poundal" && op2 == "Kilogram-force") {
-        box2_value = box1_value / 70.9319; 
+        box2_value = box1_value / 70.9319;
         document.getElementById('force_box-2').value = box2_value;
     }
     else if (op1 == "Kilogram-force" && op2 == "Newton") {
-        box2_value = box1_value * 9.80665; 
+        box2_value = box1_value * 9.80665;
         document.getElementById('force_box-2').value = box2_value;
     }
     else if (op1 == "Kilogram-force" && op2 == "Kilonewton") {
-        box2_value = box1_value * 0.00980665; 
+        box2_value = box1_value * 0.00980665;
         document.getElementById('force_box-2').value = box2_value;
     }
     else if (op1 == "Kilogram-force" && op2 == "Dyne") {
-        box2_value = box1_value * 980665; 
+        box2_value = box1_value * 980665;
         document.getElementById('force_box-2').value = box2_value;
     }
     else if (op1 == "Kilogram-force" && op2 == "Pound-force") {
-        box2_value = box1_value * 2.20462; 
+        box2_value = box1_value * 2.20462;
         document.getElementById('force_box-2').value = box2_value;
     }
     else if (op1 == "Kilogram-force" && op2 == "Poundal") {
-        box2_value = box1_value * 70.9319; 
+        box2_value = box1_value * 70.9319;
         document.getElementById('force_box-2').value = box2_value;
     }
     else if (op1 == "Kilogram-force" && op2 == "Kilogram-force") {
@@ -3850,7 +3902,7 @@ function force_box2() {
     let op1 = document.getElementById('force_select-1').value;
     let op2 = document.getElementById('force_select-2').value;
 
-    if ((op1 == "Newton" && op2 == "Newton")||(box2_value=="")) {
+    if ((op1 == "Newton" && op2 == "Newton") || (box2_value == "")) {
         document.getElementById('force_box-1').value = box2_value;
     }
     else if (op1 == "Newton" && op2 == "Kilonewton") {
@@ -3862,15 +3914,15 @@ function force_box2() {
         document.getElementById('force_box-1').value = box1_value;
     }
     else if (op1 == "Newton" && op2 == "Pound-force") {
-        box1_value = box2_value * 4.44822; 
+        box1_value = box2_value * 4.44822;
         document.getElementById('force_box-1').value = box1_value;
     }
     else if (op1 == "Newton" && op2 == "Poundal") {
-        box1_value = box2_value * 0.138255; 
+        box1_value = box2_value * 0.138255;
         document.getElementById('force_box-1').value = box1_value;
     }
     else if (op1 == "Newton" && op2 == "Kilogram-force") {
-        box1_value = box2_value * 9.80665; 
+        box1_value = box2_value * 9.80665;
         document.getElementById('force_box-1').value = box1_value;
     }
     else if (op1 == "Kilonewton" && op2 == "Newton") {
@@ -3885,15 +3937,15 @@ function force_box2() {
         document.getElementById('force_box-1').value = box1_value;
     }
     else if (op1 == "Kilonewton" && op2 == "Pound-force") {
-        box1_value = box2_value * 0.00444822; 
+        box1_value = box2_value * 0.00444822;
         document.getElementById('force_box-1').value = box1_value;
     }
     else if (op1 == "Kilonewton" && op2 == "Poundal") {
-        box1_value = box2_value * 0.000138255; 
+        box1_value = box2_value * 0.000138255;
         document.getElementById('force_box-1').value = box1_value;
     }
     else if (op1 == "Kilonewton" && op2 == "Kilogram-force") {
-        box1_value = box2_value *0.00980665; 
+        box1_value = box2_value * 0.00980665;
         document.getElementById('force_box-1').value = box1_value;
     }
     else if (op1 == "Dyne" && op2 == "Newton") {
@@ -3901,97 +3953,97 @@ function force_box2() {
         document.getElementById('force_box-1').value = box1_value;
     }
     else if (op1 == "Dyne" && op2 == "Kilonewton") {
-        box1_value = box2_value*10000000;
+        box1_value = box2_value * 10000000;
         document.getElementById('force_box-1').value = box1_value;
     }
     else if (op1 == "Dyne" && op2 == "Dyne") {
         document.getElementById('force_box-1').value = box2_value;
     }
     else if (op1 == "Dyne" && op2 == "Pound-force") {
-        box1_value = box2_value * 444822.161; 
+        box1_value = box2_value * 444822.161;
         document.getElementById('force_box-1').value = box1_value;
     }
     else if (op1 == "Dyne" && op2 == "Poundal") {
-        box1_value = box2_value * 13825.5; 
+        box1_value = box2_value * 13825.5;
         document.getElementById('force_box-1').value = box1_value;
     }
     else if (op1 == "Dyne" && op2 == "Kilogram-force") {
-        box1_value = box2_value *980665; 
+        box1_value = box2_value * 980665;
         document.getElementById('force_box-1').value = box1_value;
     }
     else if (op1 == "Pound-force" && op2 == "Newton") {
-        box1_value = box2_value / 4.44822; 
+        box1_value = box2_value / 4.44822;
         document.getElementById('force_box-1').value = box1_value;
     }
     else if (op1 == "Pound-force" && op2 == "Kilonewton") {
-        box1_value = box2_value / 4448.22; 
+        box1_value = box2_value / 4448.22;
         document.getElementById('force_box-1').value = box1_value;
     }
     else if (op1 == "Pound-force" && op2 == "Dyne") {
-        box1_value = box2_value / 0.00000224809; 
+        box1_value = box2_value / 0.00000224809;
         document.getElementById('force_box-1').value = box1_value;
     }
     else if (op1 == "Pound-force" && op2 == "Pound-force") {
         document.getElementById('force_box-1').value = box2_value;
     }
     else if (op1 == "Pound-force" && op2 == "Poundal") {
-        box1_value = box2_value * 0.031080997078386276; 
+        box1_value = box2_value * 0.031080997078386276;
         document.getElementById('force_box-1').value = box1_value;
     }
     else if (op1 == "Pound-force" && op2 == "Kilogram-force") {
-        box1_value = box2_value * 2.20462; 
+        box1_value = box2_value * 2.20462;
         document.getElementById('force_box-1').value = box1_value;
     }
     else if (op1 == "Poundal" && op2 == "Newton") {
-        box1_value = box2_value / 0.138255; 
+        box1_value = box2_value / 0.138255;
         document.getElementById('force_box-1').value = box1_value;
     }
     else if (op1 == "Poundal" && op2 == "Kilonewton") {
-        box1_value = box2_value / 138.255; 
+        box1_value = box2_value / 138.255;
         document.getElementById('force_box-1').value = box1_value;
     }
     else if (op1 == "Poundal" && op2 == "Dyne") {
-        box1_value = box2_value / 0.0000723301; 
+        box1_value = box2_value / 0.0000723301;
         document.getElementById('force_box-1').value = box1_value;
     }
     else if (op1 == "Poundal" && op2 == "Pound-force") {
-        box1_value = box2_value / 32.174; 
+        box1_value = box2_value / 32.174;
         document.getElementById('force_box-1').value = box1_value;
     }
     else if (op1 == "Poundal" && op2 == "Poundal") {
         document.getElementById('force_box-1').value = box2_value;
     }
     else if (op1 == "Poundal" && op2 == "Kilogram-force") {
-        box1_value = box2_value / .709318; 
+        box1_value = box2_value / .709318;
         document.getElementById('force_box-1').value = box1_value;
     }
     else if (op1 == "Kilogram-force" && op2 == "Newton") {
-        box1_value = box2_value / 9.80665; 
+        box1_value = box2_value / 9.80665;
         document.getElementById('force_box-1').value = box1_value;
     }
     else if (op1 == "Kilogram-force" && op2 == "Kilonewton") {
-        box1_value = box2_value / .101972; 
+        box1_value = box2_value / .101972;
         document.getElementById('force_box-1').value = box1_value;
     }
     else if (op1 == "Kilogram-force" && op2 == "Dyne") {
-        box1_value = box2_value / 1.01972e+6; 
+        box1_value = box2_value / 1.01972e+6;
         document.getElementById('force_box-1').value = box1_value;
     }
     else if (op1 == "Kilogram-force" && op2 == "Pound-force") {
-        box1_value = box2_value / 2.20462; 
+        box1_value = box2_value / 2.20462;
         document.getElementById('force_box-1').value = box1_value;
     }
     else if (op1 == "Kilogram-force" && op2 == "Poundal") {
-        box1_value = box2_value / 70.9318; 
+        box1_value = box2_value / 70.9318;
         document.getElementById('force_box-1').value = box1_value;
     }
     else if (op1 == "Kilogram-force" && op2 == "Kilogram-force") {
         document.getElementById('force_box-1').value = box2_value;
     }
     force_his_show2();
-    
-    
-    
+
+
+
 }
 
 function force_his_show() {
@@ -3999,26 +4051,30 @@ function force_his_show() {
     let box2_value = document.getElementById('force_box-2').value;
     let op1 = document.getElementById('force_select-1').value;
     let op2 = document.getElementById('force_select-2').value;
-    document.getElementById('hs_box_1').value = box1_value;
-    document.getElementById('hs_box_2').value = box2_value;
-    document.getElementById('unit1').innerHTML = op1;
-    document.getElementById('unit2').innerHTML = op2;
-    let node = document.getElementById('hi');
-    let clone = node.cloneNode(true);
-    document.getElementById('hist').appendChild(clone);
+    if (box1_value != "") {
+        document.getElementById('hs_box_1').value = box1_value;
+        document.getElementById('hs_box_2').value = box2_value;
+        document.getElementById('unit1').innerHTML = op1;
+        document.getElementById('unit2').innerHTML = op2;
+        let node = document.getElementById('hi');
+        let clone = node.cloneNode(true);
+        document.getElementById('hist').appendChild(clone);
+    }
 }
 function force_his_show2() {
     let box1_value = document.getElementById('force_box-1').value;
     let box2_value = document.getElementById('force_box-2').value;
     let op1 = document.getElementById('force_select-1').value;
     let op2 = document.getElementById('force_select-2').value;
-    document.getElementById('rhs_box_1').value = box1_value;
-    document.getElementById('rhs_box_2').value = box2_value;
-    document.getElementById('runit1').innerHTML = op1;
-    document.getElementById('runit2').innerHTML = op2;
-    let node = document.getElementById('rhi');
-    let clone = node.cloneNode(true);
-    document.getElementById('hist').appendChild(clone);
+    if (box2_value != "") {
+        document.getElementById('hs_box_1').value = box1_value;
+        document.getElementById('hs_box_2').value = box2_value;
+        document.getElementById('unit1').innerHTML = op1;
+        document.getElementById('unit2').innerHTML = op2;
+        let node = document.getElementById('hi');
+        let clone = node.cloneNode(true);
+        document.getElementById('hist').appendChild(clone);
+    }
 }
 function density_box1() {
     let box1_value = document.getElementById('density_box-1').value;
@@ -4026,7 +4082,7 @@ function density_box1() {
     let op1 = document.getElementById('density_select-1').value;
     let op2 = document.getElementById('density_select-2').value;
 
-    if ((op1 == "Kilogram per cubic meter" && op2 == "Kilogram per cubic meter")||(box1_value=="")) {
+    if ((op1 == "Kilogram per cubic meter" && op2 == "Kilogram per cubic meter") || (box1_value == "")) {
         document.getElementById('density_box-2').value = box1_value;
     }
     else if (op1 == "Kilogram per cubic meter" && op2 == "Gram per cubic centimeter") {
@@ -4034,7 +4090,7 @@ function density_box1() {
         document.getElementById('density_box-2').value = box2_value;
     }
     else if (op1 == "Kilogram per cubic meter" && op2 == "Pound per cubic foot") {
-        box2_value = box1_value / 16.0184634; 
+        box2_value = box1_value / 16.0184634;
         document.getElementById('density_box-2').value = box2_value;
     }
     else if (op1 == "Gram per cubic centimeter" && op2 == "Gram per cubic centimeter") {
@@ -4056,7 +4112,7 @@ function density_box1() {
         document.getElementById('density_box-2').value = box2_value;
     }
     else if (op1 == "Pound per cubic foot" && op2 == "Kilogram per cubic meter") {
-        box2_value = box1_value / 0.062428; 
+        box2_value = box1_value / 0.062428;
         document.getElementById('density_box-2').value = box2_value;
     }
     density_his_show();
@@ -4068,7 +4124,7 @@ function density_box2() {
     let op1 = document.getElementById('density_select-1').value;
     let op2 = document.getElementById('density_select-2').value;
 
-    if ((op1 == "Kilogram per cubic meter" && op2 == "Kilogram per cubic meter")||(box2_value=="")) {
+    if ((op1 == "Kilogram per cubic meter" && op2 == "Kilogram per cubic meter") || (box2_value == "")) {
         document.getElementById('density_box-1').value = box2_value;
     }
     else if (op1 == "Kilogram per cubic meter" && op2 == "Gram per cubic centimeter") {
@@ -4076,10 +4132,10 @@ function density_box2() {
         document.getElementById('density_box-1').value = box1_value;
     }
     else if (op1 == "Kilogram per cubic meter" && op2 == "Pound per cubic foot") {
-        box1_value = box2_value * 16.018453258153393; 
+        box1_value = box2_value * 16.018453258153393;
         document.getElementById('density_box-1').value = box1_value;
     }
-    else  if (op1 == "Gram per cubic centimeter" && op2 == "Gram per cubic centimeter") {
+    else if (op1 == "Gram per cubic centimeter" && op2 == "Gram per cubic centimeter") {
         document.getElementById('density_box-1').value = box2_value;
     }
     else if (op1 == "Gram per cubic centimeter" && op2 == "Kilogram per cubic meter") {
@@ -4087,18 +4143,18 @@ function density_box2() {
         document.getElementById('density_box-1').value = box1_value;
     }
     else if (op1 == "Gram per cubic centimeter" && op2 == "Pound per cubic foot") {
-        box1_value = box2_value * 0.016018453258153393; 
+        box1_value = box2_value * 0.016018453258153393;
         document.getElementById('density_box-1').value = box1_value;
     }
     else if (op1 == "Pound per cubic foot" && op2 == "Pound per cubic foot") {
         document.getElementById('density_box-1').value = box2_value;
     }
     else if (op1 == "Pound per cubic foot" && op2 == "Gram per cubic centimeter") {
-        box1_value = box2_value *62.428; 
+        box1_value = box2_value * 62.428;
         document.getElementById('density_box-1').value = box1_value;
     }
     else if (op1 == "Pound per cubic foot" && op2 == "Kilogram per cubic meter") {
-        box1_value = box2_value *0.06242796047466075; 
+        box1_value = box2_value * 0.06242796047466075;
         document.getElementById('density_box-1').value = box1_value;
     }
     density_his_show2();
@@ -4109,24 +4165,28 @@ function density_his_show() {
     let box2_value = document.getElementById('density_box-2').value;
     let op1 = document.getElementById('density_select-1').value;
     let op2 = document.getElementById('density_select-2').value;
-    document.getElementById('hs_box_1').value = box1_value;
-    document.getElementById('hs_box_2').value = box2_value;
-    document.getElementById('unit1').innerHTML = op1;
-    document.getElementById('unit2').innerHTML = op2;
-    let node = document.getElementById('hi');
-    let clone = node.cloneNode(true);
-    document.getElementById('hist').appendChild(clone);
+    if (box1_value != "") {
+        document.getElementById('hs_box_1').value = box1_value;
+        document.getElementById('hs_box_2').value = box2_value;
+        document.getElementById('unit1').innerHTML = op1;
+        document.getElementById('unit2').innerHTML = op2;
+        let node = document.getElementById('hi');
+        let clone = node.cloneNode(true);
+        document.getElementById('hist').appendChild(clone);
+    }
 }
 function density_his_show2() {
     let box1_value = document.getElementById('density_box-1').value;
     let box2_value = document.getElementById('density_box-2').value;
     let op1 = document.getElementById('density_select-1').value;
     let op2 = document.getElementById('density_select-2').value;
-    document.getElementById('rhs_box_1').value = box1_value;
-    document.getElementById('rhs_box_2').value = box2_value;
-    document.getElementById('runit1').innerHTML = op1;
-    document.getElementById('runit2').innerHTML = op2;
-    let node = document.getElementById('rhi');
-    let clone = node.cloneNode(true);
-    document.getElementById('hist').appendChild(clone);
+    if (box2_value != "") {
+        document.getElementById('hs_box_1').value = box1_value;
+        document.getElementById('hs_box_2').value = box2_value;
+        document.getElementById('unit1').innerHTML = op1;
+        document.getElementById('unit2').innerHTML = op2;
+        let node = document.getElementById('hi');
+        let clone = node.cloneNode(true);
+        document.getElementById('hist').appendChild(clone);
+    }
 }
